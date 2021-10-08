@@ -1,0 +1,134 @@
+LINUX PROGRAMS:
+exam@debian:~$ mkdir FISAT
+exam@debian:~$ cd FISAT
+exam@debian:~/FISAT$ mkdir Day1
+exam@debian:~/FISAT$ mkdir Day2
+exam@debian:~/FISAT$ mkdir Day3
+exam@debian:~/FISAT$ cd Day1
+exam@debian:~/FISAT/Day1$ cat > f1.txt
+This is file One.
+exam@debian:~/FISAT/Day1$ cat f1.txt
+This is file One.
+exam@debian:~/FISAT/Day1$ cat > f2.txt
+This is file Two.
+exam@debian:~/FISAT/Day1$ cat > f3.txt
+This is file three.
+exam@debian:~/FISAT/Day1$ cd ..
+exam@debian:~/FISAT$ cd Day2
+exam@debian:~/FISAT/Day2$ cat > m1.txt
+this is first file under Day two.
+exam@debian:~/FISAT/Day2$ cat > m2.txt
+This is Second file under Day two. 
+exam@debian:~/FISAT/Day2$ cd ..
+exam@debian:~/FISAT$ cd Day3
+exam@debian:~/FISAT/Day3$ cat > c1.txt
+This file is under Day three.
+exam@debian:~/FISAT/Day3$ cat > c2.txt
+This file is under Day three,which is the third directory.
+exam@debian:~/FISAT/Day3$ cd ..
+exam@debian:~/FISAT$ cd Day1
+exam@debian:~/FISAT/Day1$ cd ..
+exam@debian:~/FISAT$ cd Day2
+exam@debian:~/FISAT/Day2$ cat m1.txt >> m2.txt
+exam@debian:~/FISAT/Day2$ cat m2.txt
+This is Second file under Day two.
+this is first file under Day two.
+exam@debian:~/FISAT/Day2$ cat m1.txt
+this is first file under Day two.
+exam@debian:~/FISAT/Day2$ cd ~
+   
+exam@debian:~$ pwd
+/home/exam
+
+Q1. cat > m1.txt
+    cat > m2.txt
+    cat m1.txt m2.txt >>m3.txt
+    
+ Q3. chmod a+w f1.txt
+ Q4.ps
+ Q5.pwd
+
+
+
+Q2. echo -e "Menu:\n 1.Area of Circle: \n 2.Area of Rectangle: \n3.Area of Triangle:\n"
+echo "Enter your Choice:"
+read ch
+case $ch in
+    1)echo "Enter the radius:"
+      read r
+      area=`expr $r \* $r \* 22`
+      areac=`expr $area / 7`
+      echo "Area of Circle is:$areac";;
+    2)echo "Enter the breadth and height:"
+      read br
+      read he
+      arear=`expr $br \* $he`
+      echo "Area of Rectangle is:$arear";;
+    3)echo "Enter the breadth and height:"
+      read b
+      read h
+      areat=`expr $b \* $h`
+      areatri=`expr $areat / 2`
+      echo "Area of Triangle is:$areatri";;
+esac
+      
+OUTPUT:
+
+Menu:
+ 1.Area of Circle: 
+ 2.Area of Rectangle: 
+3.Area of Triangle:
+
+Enter your Choice:
+2
+Enter the breadth and height:
+4
+3
+Area of Rectangle is:12
+exam@debian:~$ bash area.sh
+Menu:
+ 1.Area of Circle: 
+ 2.Area of Rectangle: 
+3.Area of Triangle:
+
+Enter your Choice:
+3
+Enter the breadth and height:
+4
+3
+Area of Triangle is:6
+exam@debian:~$ bash area.sh
+Menu:
+ 1.Area of Circle: 
+ 2.Area of Rectangle: 
+3.Area of Triangle:
+
+Enter your Choice:
+3
+Enter the breadth and height:
+3
+3
+Area of Triangle is:4
+exam@debian:~$ bash area.sh
+Menu:
+ 1.Area of Circle: 
+ 2.Area of Rectangle: 
+3.Area of Triangle:
+
+Enter your Choice:
+1
+Enter the radius:
+10
+Area of Circle is:314
+exam@debian:~$ bash area.sh
+Menu:
+ 1.Area of Circle: 
+ 2.Area of Rectangle: 
+3.Area of Triangle:
+
+Enter your Choice:
+1
+Enter the radius:
+4
+Area of Circle is:50
+
